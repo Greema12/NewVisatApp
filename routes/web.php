@@ -41,22 +41,13 @@ Route::middleware(['auth:sanctum',config('jetstream.auth_session'),'verified'
         Route::post('/Purchase/purchasedatastore',[purchasecontroller::class,'purchasedatastore']);
         
         
-        //edit and update Purchase data which is store in sales table and update sale_action status in purchase table
-        // Route::get('/Purchase/editSale/{id}' ,[purchasecontroller::class,'editSale']);
-        // Route::post('/Purchase/storesales',[purchasecontroller::class,'storesales']);
-        
+       
         
         //checkbox bulk data edit and update
         Route::post('/Purchase/getBulkPurchaseData' ,[purchasecontroller::class,'getBulkPurchaseData']);
         Route::post('/Purchase/storeBulkPurchaseData', [purchasecontroller::class, 'store']);
         
-        //open forsales Page table
-       // Route::get('/Sales/forsales',[salescontroller::class,'forsales']);
-        
-        //edit and update single sale page
-        // Route::get('/Sales/editSales/{id}' ,[salescontroller::class,'editSales']);
-        // Route::post('/Sales/storesalessingle',[salescontroller::class,'storesalessingle']);
-        
+       
         //edit and update single soldout 
         Route::get('/Sales/editSold/{id}' ,[salescontroller::class,'editSold']);
         Route::post('/Sales/storesoldout',[salescontroller::class,'storesoldout']);
